@@ -78,6 +78,7 @@ header, .pp-hero-shell {
         opacity: 0.5;
         /* Increase negative right offset as width shrinks */
         margin-right: clamp(-100px, calc((1440px - 100vw) * -0.5), 0px);
+        overflow: hidden;
     }
     .pp-hero-media {
         overflow: hidden;
@@ -133,6 +134,29 @@ header, .pp-hero-shell {
 
 .pp-header-menu {
     margin-left: 20px;
+    flex-basis: auto;
+    display: flex !important;
+}
+
+.pp-header-container {
+    flex-wrap: nowrap !important;
+}
+
+.pp-header-menu .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pp-header-menu .dropdown {
+    position: relative;
+}
+
+.pp-header-menu .dropdown-menu {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
 }
 
 .pp-header-menu .dropdown-toggle::after {

@@ -37,8 +37,8 @@
       </a>
 
 
-      <div class="collapse navbar-collapse dbg-4 pp-header-menu" id="navMenu">
-        <ul class="navbar-nav">
+      <div class="navbar-collapse dbg-4 pp-header-menu">
+        <ul class="navbar-nav flex-row">
           <?php foreach (($page['header']['nav'] ?? []) as $item): ?>
             <?php if (! empty($item['dropdown']) && is_array($item['dropdown'])): ?>
               <li class="nav-item dropdown">
