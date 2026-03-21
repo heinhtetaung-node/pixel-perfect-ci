@@ -13,9 +13,11 @@
     /* Debug colors (optional override for visibility) */
     .dbg-1 { background: rgba(255,0,0,0.1); }
     .dbg-2 { background: rgba(0,255,0,0.1); }
-    .dbg-3 { background: rgba(0,0,255,0.1); }
+    .dbg-3 { background: rgba(0,0,255,0.1); max-width: 1170px; margin: 0 auto; }
     .dbg-4 { background: rgba(255,255,0,0.1); }
-    .dbg-5 { background: rgba(255,0,255,0.1); }
+    .dbg-5 { background: rgba(255,0,255,0.1); max-width: 1170px; margin: 0 auto; }
+    .container-1600 { max-width: 1600px; width: 100%; margin: 0 auto; }        
+    .container-1170 { max-width: 1170px; width: 100%; margin: 0 auto; }
   </style>
 </head>
 
@@ -24,7 +26,7 @@
 <!-- ================= HEADER ================= -->
 <header class="dbg-1">
   <nav class="navbar navbar-expand-lg dbg-2">
-    <div class="container dbg-3">
+    <div class="container dbg-3 container-1600">
 
       <a class="navbar-brand" href="<?= esc($page['header']['brand']['href'] ?? '#'); ?>">
         <?php if (! empty($page['header']['brand']['logo']['src'])): ?>
@@ -32,15 +34,14 @@
             src="<?= esc(base_url($page['header']['brand']['logo']['src'])); ?>"
             alt="<?= esc($page['header']['brand']['logo']['alt'] ?? ''); ?>"
           >
-        <?php endif; ?>
-        <?= esc($page['header']['brand']['label'] ?? 'IRONSOFTWARE'); ?>
+        <?php endif; ?>        
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         ☰
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end dbg-4" id="navMenu">
+      <div class="collapse navbar-collapse dbg-4" id="navMenu">
         <ul class="navbar-nav">
           <?php foreach (($page['header']['nav'] ?? []) as $item): ?>
             <li class="nav-item">
@@ -57,55 +58,61 @@
 
 <!-- ================= HERO ================= -->
 <section class="py-5 dbg-2">
-  <div class="container dbg-3">
-    <div class="row align-items-center">
+  <div class="position-relative container-1600">
+    <div class="container dbg-3">
+        <div class="row align-items-center">
 
-      <!-- Left -->
-      <div class="col-12 col-lg-6 mb-4 mb-lg-0 dbg-4">
-        <p>
-          <?php if (! empty($page['hero']['productIcon']['src'])): ?>
+        <!-- Left -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 dbg-4">
+            <p>
+            <?php if (! empty($page['hero']['productIcon']['src'])): ?>
+                <img
+                src="<?= esc(base_url($page['hero']['productIcon']['src'])); ?>"
+                alt="<?= esc($page['hero']['productIcon']['alt'] ?? ''); ?>"
+                >
+            <?php endif; ?>
+            <?= esc($page['hero']['productLabel'] ?? ''); ?>
+            </p>
+            <p><?= esc($page['hero']['lead'] ?? ''); ?></p>
+            <h1><?= esc($page['hero']['title'] ?? ''); ?></h1>
+            <p><?= esc($page['hero']['status'] ?? ''); ?></p>
+        </div>
+
+        <!-- Right -->
+        <div class="col-12 col-lg-6 dbg-5 text-center">
+            <?php if (! empty($page['hero']['heroImage']['src'])): ?>
             <img
-              src="<?= esc(base_url($page['hero']['productIcon']['src'])); ?>"
-              alt="<?= esc($page['hero']['productIcon']['alt'] ?? ''); ?>"
+                src="<?= esc(base_url($page['hero']['heroImage']['src'])); ?>"
+                alt="<?= esc($page['hero']['heroImage']['alt'] ?? ''); ?>"
+                class="position-absolute top-0 end-0"
             >
-          <?php endif; ?>
-          <?= esc($page['hero']['productLabel'] ?? ''); ?>
-        </p>
-        <p><?= esc($page['hero']['lead'] ?? ''); ?></p>
-        <h1><?= esc($page['hero']['title'] ?? ''); ?></h1>
-        <p><?= esc($page['hero']['status'] ?? ''); ?></p>
-      </div>
+            <?php else: ?>
+            <?= esc($page['hero']['imagePlaceholder'] ?? 'IMAGE'); ?>
+            <?php endif; ?>
+        </div>
 
-      <!-- Right -->
-      <div class="col-12 col-lg-6 dbg-5 text-center">
-        <?= esc($page['hero']['imagePlaceholder'] ?? 'IMAGE'); ?>
-      </div>
-
+        </div>
     </div>
   </div>
 </section>
 
 
 <!-- ================= SIGNUP STRIP ================= -->
-<section class="py-5 text-center dbg-3">
+<section class="py-5 dbg-3">
   <div class="container dbg-4">
 
     <h2><?= esc($page['signupStrip']['title'] ?? ''); ?></h2>
     <p><?= esc($page['signupStrip']['subtitle'] ?? ''); ?></p>
-
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6 dbg-5">
-        <form class="d-flex flex-column flex-sm-row gap-2" action="#" method="post">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="<?= esc($page['signupStrip']['form']['placeholder'] ?? ''); ?>"
-            aria-label="<?= esc($page['signupStrip']['form']['placeholder'] ?? 'Email address'); ?>"
-          >
-          <button class="btn btn-danger" type="submit"><?= esc($page['signupStrip']['form']['buttonLabel'] ?? ''); ?></button>
-        </form>
-      </div>
-    </div>
+      
+    <form class="d-flex flex-column flex-sm-row gap-2 col-12 col-md-8 col-lg-6" action="#" method="post">
+        <input
+        type="email"
+        class="form-control"
+        placeholder="<?= esc($page['signupStrip']['form']['placeholder'] ?? ''); ?>"
+        aria-label="<?= esc($page['signupStrip']['form']['placeholder'] ?? 'Email address'); ?>"
+        >
+        <button class="btn btn-danger" type="submit"><?= esc($page['signupStrip']['form']['buttonLabel'] ?? ''); ?></button>
+    </form>
 
     <p class="mt-3 mb-1"><?= esc($page['signupStrip']['comingSoonBadge'] ?? ''); ?></p>
     <p class="mt-0"><?= esc($page['signupStrip']['comingSoonText'] ?? ''); ?></p>
@@ -118,9 +125,16 @@
 <section class="py-5 text-center dbg-4">
   <div class="container dbg-5">
 
-    <h2>
-      <?= esc($page['productFeatures']['title'] ?? ''); ?>
-      <small><?= esc($page['productFeatures']['badge'] ?? ''); ?></small>
+    <h2 class="d-flex align-items-center justify-content-center gap-2">
+      <span><?= esc($page['productFeatures']['title'] ?? ''); ?></span>
+      <?php if (! empty($page['productFeatures']['icon']['src'])): ?>
+        <img
+          src="<?= esc(base_url($page['productFeatures']['icon']['src'])); ?>"
+          alt="<?= esc($page['productFeatures']['icon']['alt'] ?? ''); ?>"
+        >
+      <?php else: ?>
+        <small><?= esc($page['productFeatures']['badge'] ?? ''); ?></small>
+      <?php endif; ?>
     </h2>
 
     <div class="row mt-4">
@@ -150,11 +164,18 @@
 <!-- ================= WHY SECTION ================= -->
 <section class="py-5 dbg-1">
   <div class="container dbg-2">
-    <div class="row align-items-center">
+    <div class="row align-items-center container-1170">
 
       <!-- Image -->
       <div class="col-12 col-lg-4 mb-4 mb-lg-0 dbg-3 text-center">
-        <?= esc($page['whySection']['imagePlaceholder'] ?? 'IMAGE'); ?>
+        <?php if (! empty($page['whySection']['image']['src'])): ?>
+          <img
+            src="<?= esc(base_url($page['whySection']['image']['src'])); ?>"
+            alt="<?= esc($page['whySection']['image']['alt'] ?? ''); ?>"
+          >
+        <?php else: ?>
+          <?= esc($page['whySection']['imagePlaceholder'] ?? 'IMAGE'); ?>
+        <?php endif; ?>
       </div>
 
       <!-- Content -->

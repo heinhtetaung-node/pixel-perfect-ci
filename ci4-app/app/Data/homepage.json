@@ -32,6 +32,10 @@
       "src": "assets/images/ironpdf-mark.svg",
       "alt": "IronPDF icon"
     },
+    "heroImage": {
+      "src": "assets/images/hero-visual.svg",
+      "alt": "IronPDF C++ hero visual"
+    },
     "productLabel": "IRONPDF for C++",
     "lead": "Building on the success of IronPDF for .NET",
     "title": "Beta Software Program IronPDF for C++",
@@ -49,6 +53,10 @@
     "comingSoonText": "IronPDF Beta Program also coming soon for Python  Node.JS  Java"
   },
   "productFeatures": {
+    "icon": {
+      "src": "assets/images/coming-soon-badge.svg",
+      "alt": "Coming soon badge"
+    },
     "title": "IronPDF for C++",
     "badge": "COMING SOON",
     "items": [
@@ -64,6 +72,10 @@
     ]
   },
   "whySection": {
+    "image": {
+      "src": "assets/images/why-section-visual.svg",
+      "alt": "Why make a C++ PDF Library visual"
+    },
     "imagePlaceholder": "IMAGE",
     "title": "Why make a C++ PDF Library",
     "paragraphs": [
