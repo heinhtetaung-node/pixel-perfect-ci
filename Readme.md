@@ -49,5 +49,4 @@ php spark serve
 - Content is driven by `app/Data/homepage.json`.
 - Update JSON values to change text blocks without editing the view.
 - Bootstrap is loaded from CDN and extended with `public/assets/css/styles.css`.
-Full-Stack Web Developer
 
