@@ -1,6 +1,6 @@
 # Pixel Perfect CI
 
-This repository contains a CodeIgniter 4 implementation of a frontend challenge with a responsive, semantic, and JSON-driven homepage.
+This repository contains a CodeIgniter 4 implementation of a frontend homepage with a responsive, semantic, and JSON-driven homepage.
 
 ## Tech Stack
 
