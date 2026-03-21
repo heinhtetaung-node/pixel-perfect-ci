@@ -28,6 +28,10 @@
     ]
   },
   "hero": {
+    "productIcon": {
+      "src": "assets/images/ironpdf-mark.svg",
+      "alt": "IronPDF icon"
+    },
     "productLabel": "IRONPDF for C++",
     "lead": "Building on the success of IronPDF for .NET",
     "title": "Beta Software Program IronPDF for C++",

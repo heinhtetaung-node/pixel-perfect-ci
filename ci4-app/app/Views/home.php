@@ -62,7 +62,15 @@
 
       <!-- Left -->
       <div class="col-12 col-lg-6 mb-4 mb-lg-0 dbg-4">
-        <p><?= esc($page['hero']['productLabel'] ?? ''); ?></p>
+        <p>
+          <?php if (! empty($page['hero']['productIcon']['src'])): ?>
+            <img
+              src="<?= esc(base_url($page['hero']['productIcon']['src'])); ?>"
+              alt="<?= esc($page['hero']['productIcon']['alt'] ?? ''); ?>"
+            >
+          <?php endif; ?>
+          <?= esc($page['hero']['productLabel'] ?? ''); ?>
+        </p>
         <p><?= esc($page['hero']['lead'] ?? ''); ?></p>
         <h1><?= esc($page['hero']['title'] ?? ''); ?></h1>
         <p><?= esc($page['hero']['status'] ?? ''); ?></p>
