@@ -45,6 +45,7 @@ body {
     text-rendering: optimizeLegibility;
     background-color: #2C0F29;
     color: #fff;
+    overflow-x: hidden;
 }
 
 .navbar-expand-lg {
@@ -78,12 +79,14 @@ header, .pp-hero-shell {
         opacity: 0.5;
         /* Increase negative right offset as width shrinks */
         margin-right: clamp(-100px, calc((1440px - 100vw) * -0.5), 0px);
-        overflow: hidden;
+        overflow: hidden;        
     }
     .pp-hero-media {
         overflow: hidden;
     }
 }
+
+
 
 .pp-signup-container {
     background: linear-gradient(135deg, #8E608E 0%, #402640 52%, #371A34 100%);
@@ -122,6 +125,13 @@ header, .pp-hero-shell {
         font-size: 38px;
         
     }
+}
+
+@media (max-width: 419.98px) {
+    .pp-hero-title.text-nowrap {
+        white-space: normal !important;
+    }
+    
 }
 
 .pp-hero-status {
@@ -178,7 +188,20 @@ header, .pp-hero-shell {
     vertical-align: middle;
     color: #fff;
     padding: 5px 24px 0px 0px;
+    text-wrap: nowrap;
+    z-index: 1000;
 }
+
+@media (max-width: 767.98px) {
+    .pp-header-container .navbar-nav .nav-link {
+        padding: 5px 10px 0px 0px;
+    }
+    /* hero image margin top 40px */
+    .pp-hero-image {
+        margin-top: 40px;
+    }
+}
+
 .pp-hero-content {
     padding-top: 74px;
 }
