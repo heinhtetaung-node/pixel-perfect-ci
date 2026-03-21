@@ -104,6 +104,12 @@ header, .pp-hero-shell {
     line-height: 100%;
 }
 
+.pp-hero-product-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
 .pp-hero-lead {
     font-family: "Gotham";
     font-weight: 700;
@@ -248,7 +254,7 @@ header, .pp-hero-shell {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0;
-    margin-top: 10px;
+    margin-top: 20px !important;
 }
 
 .pp-coming-soon-row {
@@ -314,12 +320,12 @@ header, .pp-hero-shell {
     border-color: #E01A59;
 }
 .pp-hero-product-label-text {
+    display: inline-block;
     font-family: "Gotham";
     font-weight: 300;
     font-size: 17px;
     line-height: 36px;
-    letter-spacing: 0;
-    margin-top:20px;
+    letter-spacing: 0;    
 }
 
 .pp-header-menu,

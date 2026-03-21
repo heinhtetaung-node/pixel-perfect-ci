@@ -66,7 +66,7 @@
     "subtitle": "Sign up NOW to get early access!",
     "form": {
       "placeholder": "Enter email adress",
-      "buttonLabel": "Sign up now >"
+      "buttonLabel": "Sign up "
     },
     "comingSoonBadge": "# Coming Soon",
     "comingSoonText": "IronPDF Beta Program also coming soon for <b>Python</b> | <b>Node.JS</b> | <b>Java</b>"
