@@ -27,6 +27,12 @@
     <div class="container dbg-3">
 
       <a class="navbar-brand" href="<?= esc($page['header']['brand']['href'] ?? '#'); ?>">
+        <?php if (! empty($page['header']['brand']['logo']['src'])): ?>
+          <img
+            src="<?= esc(base_url($page['header']['brand']['logo']['src'])); ?>"
+            alt="<?= esc($page['header']['brand']['logo']['alt'] ?? ''); ?>"
+          >
+        <?php endif; ?>
         <?= esc($page['header']['brand']['label'] ?? 'IRONSOFTWARE'); ?>
       </a>
 
