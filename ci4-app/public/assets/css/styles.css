@@ -213,6 +213,115 @@ header, .pp-hero-shell {
     font-size: 14px;
     font-weight: 300;
 }
+.pp-signup-title {
+    font-family: "Gotham";
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+}
+.pp-signup-subtitle {
+    font-family: "Gotham";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+.pp-coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    height: 32px;
+    width: 146px;
+    font-size: 14px;
+    border-radius: 126px;
+    padding: 2px 18px;
+    background-color: #C6AAC6;
+    color: #8F618F;
+    margin-top: 25px;
+}
+.pp-coming-soon-text {
+    font-family: "Gotham";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-top: 10px;
+}
+
+.pp-coming-soon-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.pp-coming-soon-row .pp-coming-soon-badge,
+.pp-coming-soon-row .pp-coming-soon-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .pp-coming-soon-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+.pp-signup-form {
+    position: relative;
+    width: 530px;
+    max-width: 100%;
+    height: 64px;
+    min-height: 64px;
+    display: block !important;
+}
+
+.pp-signup-input.form-control {
+    width: 100%;
+    height: 64px;
+    border-radius: 81px;
+    border: 3px solid #C6AAC6;
+    padding-left: 26px;
+    padding-right: 210px;
+    box-sizing: border-box;
+}
+
+.pp-signup-input.form-control::placeholder {
+    font-family: "Gotham";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    word-spacing: 1px;
+}
+
+.pp-signup-form .btn-danger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 64px;
+    min-height: 64px;
+    border-radius: 79px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #E01A59;
+    border-color: #E01A59;
+}
+.pp-hero-product-label-text {
+    font-family: "Gotham";
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 36px;
+    letter-spacing: 0;
+    margin-top:20px;
+}
+
 .pp-header-menu,
 .pp-nav-dropdown-icon,
 .pp-hero-shell,

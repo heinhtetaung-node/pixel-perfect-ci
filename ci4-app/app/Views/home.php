@@ -107,7 +107,7 @@
                         class="pp-hero-product-icon"
                         >
                     <?php endif; ?>
-                    <span class="pp-hero-product-label-text mt-4">
+                    <span class="pp-hero-product-label-text">
                     <?= esc($page['hero']['productLabel'] ?? ''); ?>
                     </span>
                 </div>
@@ -126,22 +126,23 @@
 <section class="py-5 pp-signup-container">
   <div class="container dbg-4 container-1170">
 
-    <h2><?= esc($page['signupStrip']['title'] ?? ''); ?></h2>
-    <p><?= esc($page['signupStrip']['subtitle'] ?? ''); ?></p>
+    <h2 class="pp-signup-title"><?= esc($page['signupStrip']['title'] ?? ''); ?></h2>
+    <p class="pp-signup-subtitle mb-4"><?= esc($page['signupStrip']['subtitle'] ?? ''); ?></p>
       
-    <form class="d-flex flex-column flex-sm-row gap-2 col-12 col-md-8 col-lg-5" action="#" method="post">
+    <form class="d-flex flex-column mt-1 flex-sm-row gap-2 col-12 col-md-8 col-lg-5 pp-signup-form" action="#" method="post">
         <input
         type="email"
-        class="form-control"
+        class="form-control pp-signup-input"
         placeholder="<?= esc($page['signupStrip']['form']['placeholder'] ?? ''); ?>"
         aria-label="<?= esc($page['signupStrip']['form']['placeholder'] ?? 'Email address'); ?>"
         >
         <button class="btn btn-danger" type="submit"><?= esc($page['signupStrip']['form']['buttonLabel'] ?? ''); ?></button>
     </form>
 
-    <p class="mt-3 mb-1"><?= esc($page['signupStrip']['comingSoonBadge'] ?? ''); ?></p>
-    <p class="mt-0"><?= esc($page['signupStrip']['comingSoonText'] ?? ''); ?></p>
-
+    <div class="pp-coming-soon-row">
+    <p class="mt-4 mb-1 pp-coming-soon-badge"><?= esc($page['signupStrip']['comingSoonBadge'] ?? ''); ?></p>
+    <p class="mt-3 pp-coming-soon-text text-nowrap md-text-wrap"><?= $page['signupStrip']['comingSoonText'] ?? ''; ?></p>
+    </div>
   </div>
 </section>
 
