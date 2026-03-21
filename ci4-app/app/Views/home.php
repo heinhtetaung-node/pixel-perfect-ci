@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?= esc($page['meta']['title'] ?? 'IronPDF C++ Beta'); ?></title>
   <meta name="description" content="<?= esc($page['meta']['description'] ?? ''); ?>">
-
+  
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
 
   <style>
     /* Debug colors (optional override for visibility) */
-    .dbg-1 { background: rgba(255,0,0,0.1); }
-    .dbg-2 { background: rgba(0,255,0,0.1); }
-    .dbg-3 { background: rgba(0,0,255,0.1); max-width: 1170px; margin: 0 auto; }
-    .dbg-4 { background: rgba(255,255,0,0.1); }
-    .dbg-5 { background: rgba(255,0,255,0.1); max-width: 1170px; margin: 0 auto; }
-    .container-1600 { max-width: 1600px; width: 100%; margin: 0 auto; }        
-    .container-1170 { max-width: 1170px; width: 100%; margin: 0 auto; }
+    .dbg-3 { max-width: 1170px; margin: 0 auto; }
+    .dbg-5 { max-width: 1170px; margin: 0 auto; }
+    .container-1600 { max-width: 1600px; margin: 0 auto; }        
+    .container-1170 { max-width: 1170px; margin: 0 auto; }
   </style>
 </head>
 
@@ -26,8 +23,8 @@
 
 <!-- ================= HEADER ================= -->
 <header class="dbg-1">
-  <nav class="navbar navbar-expand-lg dbg-2">
-    <div class="container position-relative dbg-3 container-1600 pp-header-container">
+  <nav class="navbar navbar-expand-lg dbg-2 pp-typo-gotham-11-upper">
+    <div class="container position-relative dbg-3 container-1600 col-12 pp-header-container">
 
       <a class="navbar-brand" href="<?= esc($page['header']['brand']['href'] ?? '#'); ?>">
         <?php if (! empty($page['header']['brand']['logo']['src'])): ?>
@@ -39,16 +36,43 @@
         <?php endif; ?>        
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        ☰
-      </button>
 
       <div class="collapse navbar-collapse dbg-4 pp-header-menu" id="navMenu">
         <ul class="navbar-nav">
           <?php foreach (($page['header']['nav'] ?? []) as $item): ?>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= esc($item['href'] ?? '#'); ?>"><?= esc($item['label'] ?? ''); ?></a>
-            </li>
+            <?php if (! empty($item['dropdown']) && is_array($item['dropdown'])): ?>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center gap-1"
+                  href="<?= esc($item['href'] ?? '#'); ?>"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <?= esc($item['label'] ?? ''); ?>
+                  <?php if (! empty($item['icon']['src'])): ?>
+                    <img
+                      src="<?= esc(base_url($item['icon']['src'])); ?>"
+                      alt="<?= esc($item['icon']['alt'] ?? ''); ?>"
+                      class="pp-nav-dropdown-icon"
+                    >
+                  <?php endif; ?>
+                </a>
+                <ul class="dropdown-menu">
+                  <?php foreach ($item['dropdown'] as $dropdownItem): ?>
+                    <li>
+                      <a class="dropdown-item" href="<?= esc($dropdownItem['href'] ?? '#'); ?>">
+                        <?= esc($dropdownItem['label'] ?? ''); ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </li>
+            <?php else: ?>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= esc($item['href'] ?? '#'); ?>"><?= esc($item['label'] ?? ''); ?></a>
+              </li>
+            <?php endif; ?>
           <?php endforeach; ?>
         </ul>
       </div>
@@ -67,42 +91,40 @@
 
 
 <!-- ================= HERO ================= -->
-<section class="py-5 dbg-2">
-  <div class="position-relative container-1600 pp-hero-shell">
+<section class="pp-hero-shell">
+  <div class="position-relative container-1600 col-12">
     <div class="container dbg-3 pp-hero-container">
         <div class="row align-items-center pp-hero-row">
 
         <!-- Left -->
         <div class="col-12 col-lg-6 mb-4 mb-lg-0 dbg-4 pp-hero-content">
-            <p>
-            <?php if (! empty($page['hero']['productIcon']['src'])): ?>
-                <img
-                src="<?= esc(base_url($page['hero']['productIcon']['src'])); ?>"
-                alt="<?= esc($page['hero']['productIcon']['alt'] ?? ''); ?>"
-                class="pp-hero-product-icon"
-                >
-            <?php endif; ?>
-            <?= esc($page['hero']['productLabel'] ?? ''); ?>
-            </p>
-            <p><?= esc($page['hero']['lead'] ?? ''); ?></p>
-            <h1><?= esc($page['hero']['title'] ?? ''); ?></h1>
-            <p><?= esc($page['hero']['status'] ?? ''); ?></p>
-        </div>
-
-        <!-- Right -->
-        <div class="col-12 col-lg-6 dbg-5 text-center pp-hero-media">
-            
-        </div>
-
-        </div>
+            <div class="pp-product-label">
+                <div class="pp-hero-product-icon">
+                    <?php if (! empty($page['hero']['productIcon']['src'])): ?>
+                        <img
+                        src="<?= esc(base_url($page['hero']['productIcon']['src'])); ?>"
+                        alt="<?= esc($page['hero']['productIcon']['alt'] ?? ''); ?>"
+                        class="pp-hero-product-icon"
+                        >
+                    <?php endif; ?>
+                    <span class="pp-hero-product-label-text mt-4">
+                    <?= esc($page['hero']['productLabel'] ?? ''); ?>
+                    </span>
+                </div>
+            </div>
+            <p class="pp-hero-lead mt-5 mb-4"><?= esc($page['hero']['lead'] ?? ''); ?></p>
+            <h1 class="pp-hero-title text-nowrap"><?= esc($page['hero']['title'] ?? ''); ?></h1>
+            <h2 class="pp-hero-title pp-hero-sub-title"><?= esc($page['hero']['subTitle'] ?? ''); ?></h2>
+            <p class="mt-3 pp-hero-status"><?= esc($page['hero']['status'] ?? ''); ?></p>
+        </div>                
     </div>
   </div>
 </section>
 
 
 <!-- ================= SIGNUP STRIP ================= -->
-<section class="py-5 dbg-3">
-  <div class="container dbg-4 pp-signup-container">
+<section class="py-5 pp-signup-container">
+  <div class="container dbg-4 container-1170">
 
     <h2><?= esc($page['signupStrip']['title'] ?? ''); ?></h2>
     <p><?= esc($page['signupStrip']['subtitle'] ?? ''); ?></p>
@@ -168,7 +190,7 @@
 <!-- ================= WHY SECTION ================= -->
 <section class="py-5 dbg-1">
   <div class="container dbg-2 pp-why-container">
-    <div class="row align-items-center container-1170 pp-why-row">
+    <div class="row align-items-center container-1170 col-12 pp-why-row">
 
       <!-- Image -->
       <div class="col-12 col-lg-4 mb-4 mb-lg-0 dbg-3 text-center pp-why-media">

@@ -15,7 +15,25 @@
     "nav": [
       {
         "label": "Products",
-        "href": "#"
+        "href": "#",
+        "icon": {
+          "src": "assets/images/nav-caret.svg",
+          "alt": "Open products menu"
+        },
+        "dropdown": [
+          {
+            "label": "IronPDF",
+            "href": "#"
+          },
+          {
+            "label": "IronOCR",
+            "href": "#"
+          },
+          {
+            "label": "IronXL",
+            "href": "#"
+          }
+        ]
       },
       {
         "label": "About Us",
@@ -36,9 +54,10 @@
       "src": "assets/images/hero-visual.svg",
       "alt": "IronPDF C++ hero visual"
     },
-    "productLabel": "IRONPDF for C++",
+    "productLabel": "for C++",
     "lead": "Building on the success of IronPDF for .NET",
-    "title": "Beta Software Program IronPDF for C++",
+    "title": "Beta Software Program",
+    "subTitle": "IronPDF for C++",
     "status": "Coming soon",
     "imagePlaceholder": "IMAGE"
   },

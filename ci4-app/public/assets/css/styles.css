@@ -6,28 +6,172 @@
     --border: #d9dfeb;
 }
 
+@font-face {
+    font-family: "Gotham";
+    src: url("../Gotham/Gotham Regular/Gotham Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../Gotham/Gotham Bold/Gotham Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../Gotham/Gotham Black/Gotham Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../Gotham/Gotham Light/Gotham Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     color: var(--text-main);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Gotham";
     line-height: 1.6;
     text-rendering: optimizeLegibility;
+    background-color: #2C0F29;
+    color: #fff;
 }
 
 .navbar-expand-lg {
     padding-top: 0px !important;
 }
 
+.navbar-brand {
+    width: 115px;
+    padding-left: 4px;
+}
+header, .pp-hero-shell {
+    background-color: #2C0F29;
+    color: #fff;
+}
+
+.pp-hero-shell {
+    min-height: 414px;
+    margin: 0 auto;
+}
+
+.pp-hero-image {
+    opacity: 1;
+    z-index: 1;
+}
+
+@media (max-width: 1439.98px) {
+    .pp-hero-image {
+        /* Scale down progressively as viewport shrinks */
+        width: clamp(120px, 54.17vw, 780px);
+        height: auto;
+        opacity: 0.5;
+        /* Increase negative right offset as width shrinks */
+        margin-right: clamp(-100px, calc((1440px - 100vw) * -0.5), 0px);
+    }
+    .pp-hero-media {
+        overflow: hidden;
+    }
+}
+
+.pp-signup-container {
+    background: linear-gradient(135deg, #8E608E 0%, #402640 52%, #371A34 100%);
+    color: #fff;
+    width: 100%;
+    min-height: 327px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.pp-product-label {
+    font-family: "Gotham";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 100%;
+}
+
+.pp-hero-lead {
+    font-family: "Gotham";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+.pp-hero-title {
+    font-family: "Gotham";
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 54px;
+    letter-spacing: 0;
+}
+
+@media (max-width: 767.98px) {
+    .pp-hero-title {
+        font-size: 38px;
+        
+    }
+}
+
+.pp-hero-status {
+    font-family: "Gotham";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.pp-header-menu {
+    margin-left: 20px;
+}
+
+.pp-header-menu .dropdown-toggle::after {
+    display: none;
+}
+
+.pp-nav-dropdown-icon {
+    display: block;
+}
+
 /* Pixel-perfect hooks (div/img) */
-.pp-header-container,
-.pp-header-logo,
+.pp-header-container .navbar-nav .nav-link{
+    font-family: "Gotham";
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #fff;
+    padding: 5px 24px 0px 0px;
+}
+.pp-hero-content {
+    padding-top: 74px;
+}
+.pp-hero-sub-title {
+    color: #C6AAC6;
+}
+.pp-hero-status {
+    color: #8F618F;
+    font-size: 14px;
+    font-weight: 300;
+}
 .pp-header-menu,
+.pp-nav-dropdown-icon,
 .pp-hero-shell,
 .pp-hero-container,
 .pp-hero-row,
-.pp-hero-content,
-.pp-hero-product-icon,
 .pp-hero-media,
-.pp-hero-image,
 .pp-signup-container,
 .pp-features-container,
 .pp-features-heading-icon,
