@@ -236,18 +236,20 @@
 </section>
 
 
-<!-- ================= FINAL SIGNUP ================= -->
-<section class="py-5 text-center dbg-3">
-  <div class="container dbg-4 pp-final-signup-container">
-
-    <h2><?= esc($page['finalSignup']['title'] ?? ''); ?></h2>
+<!-- ================= FOOTER ================= -->
+<footer class="pp-final-signup-container">
+  <div class="container py-5 text-center">
+    <?php $finalSignupTitle = (string) ($page['finalSignup']['title'] ?? ''); ?>
+    <h2 class="pp-final-signup-title">
+      <?= str_replace('Beta Program', '<span class="pp-final-signup-title-highlight">Beta Program</span>', esc($finalSignupTitle)); ?>
+    </h2>
 
     <div class="row justify-content-center mt-3 pp-final-signup-row">
-      <div class="col-12 col-md-8 col-lg-6 dbg-5 pp-final-signup-form-wrap">
-        <form class="d-flex flex-column flex-sm-row gap-2" action="#" method="post">
+      <div class="col-12 pp-final-signup-form-wrap mt-2">
+        <form class="pp-signup-form pp-final-signup-form" action="#" method="post">
           <input
             type="email"
-            class="form-control"
+            class="form-control pp-signup-input pp-final-signup-input"
             placeholder="<?= esc($page['finalSignup']['form']['placeholder'] ?? ''); ?>"
             aria-label="<?= esc($page['finalSignup']['form']['placeholder'] ?? 'Email address'); ?>"
           >
@@ -255,14 +257,9 @@
         </form>
       </div>
     </div>
-
   </div>
-</section>
 
-
-<!-- ================= FOOTER ================= -->
-<footer class="py-4 text-center dbg-1">
-  <div class="container dbg-2 pp-footer-container">
+  <div class="container py-2 text-center pp-footer-container">
     <p><?= esc($page['footer']['copyright'] ?? ''); ?></p>
   </div>
 </footer>
