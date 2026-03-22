@@ -259,7 +259,7 @@
     </div>
   </div>
 
-  <div class="container py-2 text-center pp-footer-container">
+  <div class="container py-2s text-center pp-footer-container">
     <p><?= esc($page['footer']['copyright'] ?? ''); ?></p>
   </div>
 </footer>
