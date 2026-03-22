@@ -380,6 +380,34 @@ header, .pp-hero-shell {
     text-align: justify;
 }
 
+.pp-why-title-highlight {
+    color: #C6AAC6;
+}
+
+.pp-early-access-title {
+    font-family: "Gotham";
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.pp-early-access-title-highlight {
+    color: #C6AAC6;
+}
+
+.pp-early-access-description {
+    font-family: "Gotham";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
 .pp-why-section {
     background-color: #402640;
     padding-top: 80px;
@@ -505,7 +533,23 @@ header, .pp-hero-shell {
         padding-bottom: 40px;
     }
 }
+.pp-early-access-container {
+    height: 296px;    
+    background: #2C0F29;    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
+.pp-early-access-container .text-center {
+    text-align: left !important;
+}
+.pp-early-access-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
 
 .pp-header-menu,
@@ -522,7 +566,6 @@ header, .pp-hero-shell {
 .pp-why-media,
 .pp-why-image,
 .pp-why-content,
-.pp-early-access-container,
 .pp-early-access-row,
 .pp-early-access-item,
 .pp-early-access-card,

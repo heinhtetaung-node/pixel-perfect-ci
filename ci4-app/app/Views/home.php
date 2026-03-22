@@ -203,7 +203,10 @@
     >
     <?php endif; ?>
     <div class="pp-why-text">
-    <h2 class="pp-features-title mb-3 mt-3"><?= esc($page['whySection']['title'] ?? ''); ?></h2>
+    <?php $whyTitle = (string) ($page['whySection']['title'] ?? ''); ?>
+    <h2 class="pp-features-title mb-3 mt-3">
+      <?= str_replace('C++ PDF Library', '<span class="pp-why-title-highlight">C++ PDF Library</span>', esc($whyTitle)); ?>
+    </h2>
     <?php foreach (($page['whySection']['paragraphs'] ?? []) as $paragraph): ?>
       <p class="pp-why-paragraph"><?= esc($paragraph); ?></p>
     <?php endforeach; ?>
@@ -214,13 +217,16 @@
 
 
 <!-- ================= EARLY ACCESS ================= -->
-<section class="py-5 dbg-2">
-  <div class="container dbg-3 pp-early-access-container">
+<section style="background-color: yellow" class="pp-early-access-section">
+  <div class="container container-1170 pp-early-access-container">
+    
+    <?php $earlyAccessTitle = (string) ($page['earlyAccess']['title'] ?? ''); ?>
+    <h2 class="text-center pp-early-access-title">
+      <?= str_replace('C++ PDF Library', '<span class="pp-early-access-title-highlight">C++ PDF Library</span>', esc($earlyAccessTitle)); ?>
+    </h2>
+    <p class="text-center pp-early-access-description"><?= esc($page['earlyAccess']['description'] ?? ''); ?></p>
 
-    <h2 class="text-center"><?= esc($page['earlyAccess']['title'] ?? ''); ?></h2>
-    <p class="text-center"><?= esc($page['earlyAccess']['description'] ?? ''); ?></p>
-
-    <div class="row mt-4 pp-early-access-row">
+    <!-- <div class="row mt-4 pp-early-access-row">
       <?php foreach (($page['earlyAccess']['cards'] ?? []) as $index => $card): ?>
         <div class="col-12 col-md-4 mb-3 pp-early-access-item <?= $index === 0 ? 'dbg-4' : ($index === 1 ? 'dbg-5' : 'dbg-1'); ?>">
           <div class="p-3 border pp-early-access-card">
@@ -231,7 +237,7 @@
         </div>
       <?php endforeach; ?>
 
-    </div>
+    </div> -->
 
   </div>
 </section>
