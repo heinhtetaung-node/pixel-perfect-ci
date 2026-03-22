@@ -86,8 +86,8 @@
   },
   "descriptionSection": {
     "paragraphs": [
-      "The new IronPDF library for C++ will enhance the C++ developer's tool set with robust PDF generation and conversion capabilities. Developers will be able to generate new PDFs from HTML content (from text or from URL), as well as to combine, split, extract, and modify content from existing PDFs.",
-      "IronPDF for C++ will help developers create C++ applications that can do all of these PDF processing tasks and more, with speed, precision, control, and excellence."
+      "The new <b>IronPDF library for C++</b> will enhance the C++ developer's tool set with robust PDF generation and conversion capabilities. Developers will be able to generate new PDFs from HTML content (from text or from URL), as well as to combine, split, extract, and modify content from existing PDFs.",
+      "<b>IronPDF for C++</b> will help developers create C++ applications that can do all of these PDF processing tasks and more, with speed, precision, control, and excellence."
     ]
   },
   "whySection": {

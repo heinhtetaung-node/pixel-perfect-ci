@@ -152,40 +152,39 @@
 
 
 <!-- ================= FEATURES ================= -->
-<section class="py-5 text-center dbg-4">
-  <div class="container dbg-5 pp-features-container">
-
-    <h2 class="d-flex align-items-center justify-content-center gap-2">
-      <span><?= esc($page['productFeatures']['title'] ?? ''); ?></span>
-      <?php if (! empty($page['productFeatures']['icon']['src'])): ?>
-        <img
-          src="<?= esc(base_url($page['productFeatures']['icon']['src'])); ?>"
-          alt="<?= esc($page['productFeatures']['icon']['alt'] ?? ''); ?>"
-          class="pp-features-heading-icon"
-        >
-      <?php else: ?>
-        <small><?= esc($page['productFeatures']['badge'] ?? ''); ?></small>
-      <?php endif; ?>
-    </h2>
-
-    <div class="row mt-4 pp-features-row">
-      <?php foreach (($page['productFeatures']['items'] ?? []) as $index => $feature): ?>
-        <div class="col-12 col-md-4 mb-3 pp-feature-item <?= $index === 0 ? 'dbg-1' : ($index === 1 ? 'dbg-2' : 'dbg-3'); ?>">
-          <?= esc($feature); ?>
+<section class="pp-features-section">
+    <div class="container pp-features-container container-1170">
+        <div class="pp-features-row d-flex justify-content-center">
+            
+            <h2 class="pp-features-title"><?= esc($page['productFeatures']['title'] ?? ''); ?></h2>
+            <?php if (! empty($page['productFeatures']['icon']['src'])): ?>
+            <img
+                src="<?= esc(base_url($page['productFeatures']['icon']['src'])); ?>"
+                alt="<?= esc($page['productFeatures']['icon']['alt'] ?? ''); ?>"
+                class="pp-features-heading-icon"
+            />
+            <?php endif; ?>
+            
         </div>
-      <?php endforeach; ?>
-
-    </div>
-
-  </div>
+        <div class="pp-features-row mt-2">
+            <?php foreach (($page['productFeatures']['items'] ?? []) as $index => $feature): ?>
+            <?php $featureText = trim(preg_replace('/^#\s*/', '', (string) $feature)); ?>
+            <div class="pp-feature-button">
+                <span class="pp-feature-button-prefix">#</span>
+                <span class="pp-feature-button-text"><?= esc($featureText); ?></span>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>    
 </section>
 
 
-<!-- ================= DESCRIPTION ================= -->
-<section class="py-5 dbg-5">
-  <div class="container dbg-1 pp-description-container">
+<!-- ================= DESCRIPTION ================= --> 
+<section class="pp-description-container">
+  <div class="container dbg-1 container-1170">
+    
     <?php foreach (($page['descriptionSection']['paragraphs'] ?? []) as $paragraph): ?>
-      <p><?= esc($paragraph); ?></p>
+      <p><?= $paragraph ?></p>
     <?php endforeach; ?>
 
   </div>
@@ -193,31 +192,22 @@
 
 
 <!-- ================= WHY SECTION ================= -->
-<section class="py-5 dbg-1">
-  <div class="container dbg-2 pp-why-container">
-    <div class="row align-items-center container-1170 col-12 pp-why-row">
-
-      <!-- Image -->
-      <div class="col-12 col-lg-4 mb-4 mb-lg-0 dbg-3 text-center pp-why-media">
-        <?php if (! empty($page['whySection']['image']['src'])): ?>
-          <img
-            src="<?= esc(base_url($page['whySection']['image']['src'])); ?>"
-            alt="<?= esc($page['whySection']['image']['alt'] ?? ''); ?>"
-            class="pp-why-image"
-          >
-        <?php else: ?>
-          <?= esc($page['whySection']['imagePlaceholder'] ?? 'IMAGE'); ?>
-        <?php endif; ?>
-      </div>
-
-      <!-- Content -->
-      <div class="col-12 col-lg-8 dbg-4 pp-why-content">
-        <h2><?= esc($page['whySection']['title'] ?? ''); ?></h2>
-        <?php foreach (($page['whySection']['paragraphs'] ?? []) as $paragraph): ?>
-          <p><?= esc($paragraph); ?></p>
-        <?php endforeach; ?>
-      </div>
-
+<section class="pp-why-section">
+  <div class="container container-1170 pp-why-inner">
+    <div class="pp-why-layout">
+    <?php if (! empty($page['whySection']['image']['src'])): ?>
+    <img
+    src="<?= esc(base_url($page['whySection']['image']['src'])); ?>"
+    alt="<?= esc($page['whySection']['image']['alt'] ?? ''); ?>"
+    class="pp-why-image"
+    >
+    <?php endif; ?>
+    <div class="pp-why-text">
+    <h2 class="pp-features-title mb-3 mt-3"><?= esc($page['whySection']['title'] ?? ''); ?></h2>
+    <?php foreach (($page['whySection']['paragraphs'] ?? []) as $paragraph): ?>
+      <p class="pp-why-paragraph"><?= esc($paragraph); ?></p>
+    <?php endforeach; ?>
+    </div>
     </div>
   </div>
 </section>
