@@ -217,7 +217,7 @@
 
 
 <!-- ================= EARLY ACCESS ================= -->
-<section style="background-color: yellow" class="pp-early-access-section">
+<section class="pp-early-access-section">
   <div class="container container-1170 pp-early-access-container">
     
     <?php $earlyAccessTitle = (string) ($page['earlyAccess']['title'] ?? ''); ?>
@@ -226,18 +226,11 @@
     </h2>
     <p class="text-center pp-early-access-description"><?= esc($page['earlyAccess']['description'] ?? ''); ?></p>
 
-    <!-- <div class="row mt-4 pp-early-access-row">
-      <?php foreach (($page['earlyAccess']['cards'] ?? []) as $index => $card): ?>
-        <div class="col-12 col-md-4 mb-3 pp-early-access-item <?= $index === 0 ? 'dbg-4' : ($index === 1 ? 'dbg-5' : 'dbg-1'); ?>">
-          <div class="p-3 border pp-early-access-card">
-            <div class="pp-early-access-card-badge"><?= esc($card['badge'] ?? ''); ?></div>
-            <div class="pp-early-access-card-title"><?= esc($card['title'] ?? ''); ?></div>
-            <div class="pp-early-access-card-subtitle"><?= esc($card['subtitle'] ?? ''); ?></div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-
-    </div> -->
+    <div class="pp-early-access-cards">
+      <img src="<?= esc(base_url('assets/images/early-access-card-java.svg')); ?>" alt="Released IronPDF for Java" class="pp-early-access-svg">
+      <img src="<?= esc(base_url('assets/images/early-access-card-coming-soon.svg')); ?>" alt="Coming Soon IronPDF for Python" class="pp-early-access-svg">
+      <img src="<?= esc(base_url('assets/images/early-access-card-coming-soon.svg')); ?>" alt="Coming Soon IronPDF for NodeJS" class="pp-early-access-svg">
+    </div>
 
   </div>
 </section>

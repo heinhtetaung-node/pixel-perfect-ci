@@ -404,8 +404,8 @@ header, .pp-hero-shell {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0;
-    margin-top: 38px;
-    margin-bottom: 38px;
+    margin-top: 28px;
+    margin-bottom: 20px;
 }
 
 .pp-why-section {
@@ -547,8 +547,33 @@ header, .pp-hero-shell {
     text-align: left !important;
 }
 .pp-early-access-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.pp-early-access-cards {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.pp-early-access-svg {
+    display: block;
+    width: calc((100% - 32px) / 3);
+    height: auto;
+}
+
+@media (max-width: 991.98px) {
+    .pp-early-access-cards {
+        flex-direction: column;
+    }
+
+    .pp-early-access-svg {
+        width: 100%;
+        max-width: 384px;
+    }
 }
 
 
@@ -566,6 +591,8 @@ header, .pp-hero-shell {
 .pp-why-media,
 .pp-why-image,
 .pp-why-content,
+.pp-early-access-cards,
+.pp-early-access-svg,
 .pp-early-access-row,
 .pp-early-access-item,
 .pp-early-access-card,
