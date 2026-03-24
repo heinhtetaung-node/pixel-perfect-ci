@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Gotham";
-    src: url("../Gotham/Gotham Regular/Gotham Regular.otf") format("opentype");
+    src: url("../Gotham/Gotham Light/Gotham Light.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -60,23 +60,24 @@ header, .pp-hero-shell {
     background-color: #2C0F29;
     color: #fff;
 }
-
+.container-1600 { max-width: 1600px; margin: 0 auto; }        
+.container-1170 { max-width: 1170px; margin: 0 auto; }
 .pp-hero-shell {
-    min-height: 413px;
+    min-height: 361px;
     margin: 0 auto;
 }
 
 @media (min-width: 511.98px) {
     .pp-hero-shell {
-        max-height: 413px;
+        max-height: 364px;
     }
 }
 
 .pp-hero-image {
     opacity: 1;
     z-index: 1;
-    width: 840px;
-    margin-right: -56px;
+    width: 780px;
+    margin-right: -52px;
 }
 
 @media (max-width: 1439.98px) {
@@ -123,13 +124,14 @@ header, .pp-hero-shell {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0;
+    margin-top: 34px;
 }
 
 .pp-hero-title {
     font-family: "Gotham";
     font-weight: 900;
     font-size: 50px;
-    line-height: 54px;
+    line-height: 50px;
     letter-spacing: 0;
 }
 
@@ -217,11 +219,11 @@ header, .pp-hero-shell {
     /* hero image margin top 40px */
     .pp-hero-image {
         margin-top: 40px;
-    }
+    }    
 }
 
 .pp-hero-content {
-    padding-top: 74px;
+    padding-top: 68px;
 }
 .pp-hero-sub-title {
     color: #C6AAC6;
@@ -254,6 +256,7 @@ header, .pp-hero-shell {
     height: 32px;
     width: 146px;
     font-size: 14px;
+    font-weight: 700;
     border-radius: 126px;
     padding: 2px 18px;
     background-color: #C6AAC6;
@@ -262,7 +265,6 @@ header, .pp-hero-shell {
 }
 .pp-coming-soon-text {
     font-family: "Gotham";
-    font-weight: 300;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0;
@@ -281,13 +283,19 @@ header, .pp-hero-shell {
     margin-top: 0;
     margin-bottom: 0;
 }
-
+@media (max-width: 1167.98px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
 @media (max-width: 991.98px) {
     .pp-coming-soon-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
+    
 }
 
 .pp-signup-form {
@@ -344,7 +352,7 @@ header, .pp-hero-shell {
     background-color: #2C0F29;
 }
 .pp-features-container {
-    height: 233px;
+    height: 228px;
     padding-top: 20px;    
 }
 @media (max-width: 767.98px) {
@@ -448,8 +456,8 @@ header, .pp-hero-shell {
 
 .pp-why-section {
     background-color: #402640;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .pp-why-layout {
@@ -541,6 +549,11 @@ header, .pp-hero-shell {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .pp-why-section {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
 }
 
 .pp-description-container {
@@ -572,7 +585,7 @@ header, .pp-hero-shell {
     }
 }
 .pp-early-access-container {
-    height: 296px;    
+    height: 328px;    
     background: #2C0F29;    
     text-align: left;
     display: flex;
@@ -601,6 +614,11 @@ header, .pp-hero-shell {
     display: block;
     width: calc((100% - 32px) / 3);
     height: auto;
+}
+
+.pp-why-image {
+    margin-left: -84px;
+    margin-right: -60px;
 }
 
 @media (max-width: 991.98px) {
@@ -667,7 +685,6 @@ header, .pp-hero-shell {
 .pp-why-container,
 .pp-why-row,
 .pp-why-media,
-.pp-why-image,
 .pp-why-content,
 .pp-early-access-cards,
 .pp-early-access-svg,

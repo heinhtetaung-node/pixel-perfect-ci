@@ -9,22 +9,14 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
-
-  <style>
-    /* Debug colors (optional override for visibility) */
-    .dbg-3 { max-width: 1170px; margin: 0 auto; }
-    .dbg-5 { max-width: 1170px; margin: 0 auto; }
-    .container-1600 { max-width: 1600px; margin: 0 auto; }        
-    .container-1170 { max-width: 1170px; margin: 0 auto; }
-  </style>
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="dbg-1">
+<header>
   <nav class="navbar navbar-expand-lg dbg-2 pp-typo-gotham-11-upper">
-    <div class="container position-relative dbg-3 container-1600 col-12 pp-header-container">
+    <div class="container position-relative container-1600 col-12 pp-header-container">
 
       <a class="navbar-brand" href="<?= esc($page['header']['brand']['href'] ?? '#'); ?>">
         <?php if (! empty($page['header']['brand']['logo']['src'])): ?>
@@ -93,11 +85,11 @@
 <!-- ================= HERO ================= -->
 <section class="pp-hero-shell">
   <div class="position-relative container-1600 col-12">
-    <div class="container dbg-3 pp-hero-container">
+    <div class="container container-1170 pp-hero-container">
         <div class="row align-items-center pp-hero-row">
 
         <!-- Left -->
-        <div class="col-12 col-lg-6 mb-4 mb-lg-0 dbg-4 pp-hero-content">
+        <div class="col-12 col-lg-6 pp-hero-content">
             <div class="pp-product-label">
                 <div class="pp-hero-product-row">
                     <?php if (! empty($page['hero']['productIcon']['src'])): ?>
@@ -107,15 +99,15 @@
                         class="pp-hero-product-icon"
                         >
                     <?php endif; ?>
-                    <span class="pp-hero-product-label-text mt-2">
+                    <span class="pp-hero-product-label-text">
                     <?= esc($page['hero']['productLabel'] ?? ''); ?>
                     </span>
                 </div>
             </div>
-            <p class="pp-hero-lead mt-5 mb-4"><?= esc($page['hero']['lead'] ?? ''); ?></p>
+            <p class="pp-hero-lead mb-3"><?= esc($page['hero']['lead'] ?? ''); ?></p>
             <h1 class="pp-hero-title text-nowrap"><?= esc($page['hero']['title'] ?? ''); ?></h1>
             <h2 class="pp-hero-title pp-hero-sub-title"><?= esc($page['hero']['subTitle'] ?? ''); ?></h2>
-            <p class="mt-3 pp-hero-status"><?= esc($page['hero']['status'] ?? ''); ?></p>
+            <p class="mt-2 pp-hero-status"><?= esc($page['hero']['status'] ?? ''); ?></p>
         </div>                
     </div>
   </div>
@@ -221,7 +213,7 @@
   <div class="container container-1170 pp-early-access-container">
     
     <?php $earlyAccessTitle = (string) ($page['earlyAccess']['title'] ?? ''); ?>
-    <h2 class="text-center pp-early-access-title">
+    <h2 class="text-center pp-early-access-title mt-4">
       <?= str_replace('C++ PDF Library', '<span class="pp-early-access-title-highlight">C++ PDF Library</span>', esc($earlyAccessTitle)); ?>
     </h2>
     <p class="text-center pp-early-access-description"><?= esc($page['earlyAccess']['description'] ?? ''); ?></p>
@@ -237,14 +229,14 @@
 
 
 <!-- ================= FOOTER ================= -->
-<footer class="pp-final-signup-container">
+<footer class="pp-final-signup-container pt-3">
   <div class="container py-5 text-center">
     <?php $finalSignupTitle = (string) ($page['finalSignup']['title'] ?? ''); ?>
     <h2 class="pp-final-signup-title">
       <?= str_replace('Beta Program', '<span class="pp-final-signup-title-highlight">Beta Program</span>', esc($finalSignupTitle)); ?>
     </h2>
 
-    <div class="row justify-content-center mt-3 pp-final-signup-row">
+    <div class="row justify-content-center mt-3 mb-2 pp-final-signup-row">
       <div class="col-12 pp-final-signup-form-wrap mt-2">
         <form class="pp-signup-form pp-final-signup-form" action="#" method="post">
           <input
@@ -258,10 +250,10 @@
       </div>
     </div>
   </div>
-
+<!-- 
   <div class="container py-2s text-center pp-footer-container">
     <p><?= esc($page['footer']['copyright'] ?? ''); ?></p>
-  </div>
+  </div> -->
 </footer>
 
 
