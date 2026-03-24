@@ -35,6 +35,8 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 |---|---|---|
 | Bootstrap-based components and CSS features are standards-compliant | PASS | Bootstrap 5 import in `ci4-app/app/Views/home.php`; no browser-specific CSS hacks in `ci4-app/public/assets/css/styles.css` |
 | Navigation dropdown semantics are compatible with modern browsers | PASS | `data-bs-toggle="dropdown"` and `aria-expanded` in `ci4-app/app/Views/home.php` |
+| Firefox visual smoke test | PASS | [firefox-screen-test.png](screenshots/firefox-screen-test.png) |
+| Safari visual smoke test | PASS | [safari-screen-test.png](screenshots/safari-screen-test.png) |
 
 ## 5) SEO Validation
 
@@ -106,6 +108,12 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 
 - [mobile-screen-430.png](screenshots/mobile-screen-430.png)
 ![mobile-screen-430](screenshots/mobile-screen-430.png)
+
+- [firefox-screen-test.png](screenshots/firefox-screen-test.png)
+![firefox-screen-test](screenshots/firefox-screen-test.png)
+
+- [safari-screen-test.png](screenshots/safari-screen-test.png)
+![safari-screen-test](screenshots/safari-screen-test.png)
 
 ### PDF reports (links)
 

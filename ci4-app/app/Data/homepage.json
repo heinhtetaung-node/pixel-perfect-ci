@@ -65,7 +65,7 @@
     "title": "Be one of the first",
     "subtitle": "Sign up NOW to get early access!",
     "form": {
-      "placeholder": "Enter email adress",
+      "placeholder": "Enter email address",
       "buttonLabel": "Sign up "
     },
     "comingSoonBadge": "# Coming Soon",
@@ -126,7 +126,7 @@
   "finalSignup": {
     "title": "Sign up to our Beta Program",
     "form": {
-      "placeholder": "Enter email adress",
+      "placeholder": "Enter email address",
       "buttonLabel": "Sign up now >"
     }
   },
