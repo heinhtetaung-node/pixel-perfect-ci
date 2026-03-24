@@ -6,27 +6,27 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 
 | Case | Result | Evidence |
 |---|---|---|
-| Section spacing matches design on desktop | PASS | `screenshots/web-big-screen-1600.png`, `screenshots/web-laptop-screen-1440.png` |
-| Button paddings and card spacing are consistent | PASS | `screenshots/web-big-screen-1600.png`, `screenshots/tablet-screen-768.png`, `screenshots/mobile-screen-430.png` |
-| Border radius and visual rhythm are consistent | PASS | Signup pills and cards visible in `screenshots/web-big-screen-1600.png` and `screenshots/mobile-screen-430.png` |
-| Figma-to-web parity at large desktop | PASS | Side-by-side reference `screenshots/PixcelPerfectFigmaAndWeb-1600px.png` |
+| Section spacing matches design on desktop | PASS | [web-big-screen-1600.png](screenshots/web-big-screen-1600.png), [web-laptop-screen-1440.png](screenshots/web-laptop-screen-1440.png) |
+| Button paddings and card spacing are consistent | PASS | [web-big-screen-1600.png](screenshots/web-big-screen-1600.png), [tablet-screen-768.png](screenshots/tablet-screen-768.png), [mobile-screen-430.png](screenshots/mobile-screen-430.png) |
+| Border radius and visual rhythm are consistent | PASS | Signup pills/cards visible in [web-big-screen-1600.png](screenshots/web-big-screen-1600.png) and [mobile-screen-430.png](screenshots/mobile-screen-430.png) |
+| Figma-to-web parity at large desktop | PASS | Side-by-side reference [PixcelPerfectFigmaAndWeb-1600px.png](screenshots/PixcelPerfectFigmaAndWeb-1600px.png) |
 
 ## 2) Typography Accuracy
 
 | Case | Result | Evidence |
 |---|---|---|
 | Heading hierarchy is semantically correct and balanced | PASS | `h1/h2` usage in `ci4-app/app/Views/home.php`; visual verification in all screenshots |
-| Body/readability styles are consistent | PASS | `screenshots/web-laptop-screen-1440.png`, `screenshots/tablet-screen-768.png` |
-| Emphasis styles (highlight words, badges, CTA) match visual hierarchy | PASS | `screenshots/FigmaExport.png`, `screenshots/web-big-screen-1600.png` |
+| Body/readability styles are consistent | PASS | [web-laptop-screen-1440.png](screenshots/web-laptop-screen-1440.png), [tablet-screen-768.png](screenshots/tablet-screen-768.png) |
+| Emphasis styles (highlight words, badges, CTA) match visual hierarchy | PASS | [FigmaExport.png](screenshots/FigmaExport.png), [web-big-screen-1600.png](screenshots/web-big-screen-1600.png) |
 
 ## 3) Responsive Behaviour
 
 | Case | Result | Evidence |
 |---|---|---|
-| Desktop layout at `1600` remains intact | PASS | `screenshots/web-big-screen-1600.png` |
-| Laptop layout at `1440` remains intact | PASS | `screenshots/web-laptop-screen-1440.png` |
-| Tablet layout at `768` stacks/flows correctly | PASS | `screenshots/tablet-screen-768.png` |
-| Mobile layout at `430` stacks correctly and keeps CTA usable | PASS | `screenshots/mobile-screen-430.png` |
+| Desktop layout at `1600` remains intact | PASS | [web-big-screen-1600.png](screenshots/web-big-screen-1600.png) |
+| Laptop layout at `1440` remains intact | PASS | [web-laptop-screen-1440.png](screenshots/web-laptop-screen-1440.png) |
+| Tablet layout at `768` stacks/flows correctly | PASS | [tablet-screen-768.png](screenshots/tablet-screen-768.png) |
+| Mobile layout at `430` stacks correctly and keeps CTA usable | PASS | [mobile-screen-430.png](screenshots/mobile-screen-430.png) |
 | No horizontal overflow/regression in captured views | PASS | No clipped right-edge artifacts across provided screenshots |
 
 ## 4) Cross-Browser Behaviour
@@ -44,8 +44,8 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 | Meta description is present and dynamic | PASS | `ci4-app/app/Views/home.php` (`<meta name="description" ...`) |
 | Semantic sections are used (`header`, `section`, `footer`) | PASS | `ci4-app/app/Views/home.php` structure |
 | Link texts are meaningful | PASS | Header navigation labels in `ci4-app/app/Data/homepage.json` rendered in view |
-| Lighthouse SEO score (Web) | PASS | `screenshots/lighthouse-web.pdf` = `100` |
-| Lighthouse SEO score (Mobile) | PASS | `screenshots/lighthouse-mobile.pdf` = `100` |
+| Lighthouse SEO score (Web) | PASS | [lighthouse-web.pdf](screenshots/lighthouse-web.pdf) = `100` |
+| Lighthouse SEO score (Mobile) | PASS | [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf) = `100` |
 
 ## 6) Accessibility Basics
 
@@ -68,14 +68,14 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 
 | Case | Result | Evidence |
 |---|---|---|
-| Web Lighthouse Performance | PASS | `screenshots/lighthouse-web.pdf` = `99` |
-| Web Lighthouse Accessibility | PARTIAL | `screenshots/lighthouse-web.pdf` = `89` (buttons accessible name, contrast, main landmark) |
-| Web Lighthouse Best Practices | PASS | `screenshots/lighthouse-web.pdf` = `100` |
-| Web Lighthouse SEO | PASS | `screenshots/lighthouse-web.pdf` = `100` |
-| Mobile Lighthouse Performance | PARTIAL | `screenshots/lighthouse-mobile.pdf` = `82` (report notes extension/throttling impact) |
-| Mobile Lighthouse Accessibility | PARTIAL | `screenshots/lighthouse-mobile.pdf` = `89` (same flagged items as web) |
-| Mobile Lighthouse Best Practices | PASS | `screenshots/lighthouse-mobile.pdf` = `100` |
-| Mobile Lighthouse SEO | PASS | `screenshots/lighthouse-mobile.pdf` = `100` |
+| Web Lighthouse Performance | PASS | [lighthouse-web.pdf](screenshots/lighthouse-web.pdf) = `99` |
+| Web Lighthouse Accessibility | PARTIAL | [lighthouse-web.pdf](screenshots/lighthouse-web.pdf) = `89` (buttons accessible name, contrast, main landmark) |
+| Web Lighthouse Best Practices | PASS | [lighthouse-web.pdf](screenshots/lighthouse-web.pdf) = `100` |
+| Web Lighthouse SEO | PASS | [lighthouse-web.pdf](screenshots/lighthouse-web.pdf) = `100` |
+| Mobile Lighthouse Performance | PARTIAL | [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf) = `82` (report notes extension/throttling impact) |
+| Mobile Lighthouse Accessibility | PARTIAL | [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf) = `89` (same flagged items as web) |
+| Mobile Lighthouse Best Practices | PASS | [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf) = `100` |
+| Mobile Lighthouse SEO | PASS | [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf) = `100` |
 
 ## 9) Data Source and Rendering
 
@@ -87,11 +87,27 @@ Status legend: `PASS` = meets target, `PARTIAL` = works but has improvement item
 
 ## Screenshot Set Used
 
-- `screenshots/FigmaExport.png`
-- `screenshots/PixcelPerfectFigmaAndWeb-1600px.png`
-- `screenshots/web-big-screen-1600.png`
-- `screenshots/web-laptop-screen-1440.png`
-- `screenshots/tablet-screen-768.png`
-- `screenshots/mobile-screen-430.png`
-- `screenshots/lighthouse-web.pdf`
-- `screenshots/lighthouse-mobile.pdf`
+### PNG previews (clickable)
+
+- [FigmaExport.png](screenshots/FigmaExport.png)
+![FigmaExport](screenshots/FigmaExport.png)
+
+- [PixcelPerfectFigmaAndWeb-1600px.png](screenshots/PixcelPerfectFigmaAndWeb-1600px.png)
+![PixcelPerfectFigmaAndWeb-1600px](screenshots/PixcelPerfectFigmaAndWeb-1600px.png)
+
+- [web-big-screen-1600.png](screenshots/web-big-screen-1600.png)
+![web-big-screen-1600](screenshots/web-big-screen-1600.png)
+
+- [web-laptop-screen-1440.png](screenshots/web-laptop-screen-1440.png)
+![web-laptop-screen-1440](screenshots/web-laptop-screen-1440.png)
+
+- [tablet-screen-768.png](screenshots/tablet-screen-768.png)
+![tablet-screen-768](screenshots/tablet-screen-768.png)
+
+- [mobile-screen-430.png](screenshots/mobile-screen-430.png)
+![mobile-screen-430](screenshots/mobile-screen-430.png)
+
+### PDF reports (links)
+
+- [lighthouse-web.pdf](screenshots/lighthouse-web.pdf)
+- [lighthouse-mobile.pdf](screenshots/lighthouse-mobile.pdf)
