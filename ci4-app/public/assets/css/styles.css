@@ -1,11 +1,3 @@
-:root {
-    --bg-soft: #f7f8fc;
-    --text-main: #121826;
-    --text-muted: #566179;
-    --primary: #3a6ff8;
-    --border: #d9dfeb;
-}
-
 @font-face {
     font-family: "Gotham";
     src: url("../Gotham/Gotham Light/Gotham Light.otf") format("opentype");
@@ -39,7 +31,6 @@
 }
 
 body {
-    color: var(--text-main);
     font-family: "Gotham";
     line-height: 1.6;
     text-rendering: optimizeLegibility;
@@ -48,29 +39,33 @@ body {
     overflow-x: hidden;
 }
 
+/* Base layout */
 .navbar-expand-lg {
-    padding-top: 0px !important;
+    padding-top: 0 !important;
 }
 
 .navbar-brand {
     width: 115px;
     padding-left: 4px;
 }
-header, .pp-hero-shell {
+header,
+.pp-hero-shell {
     background-color: #2C0F29;
     color: #fff;
 }
-.container-1600 { max-width: 1600px; margin: 0 auto; }        
-.container-1170 { max-width: 1170px; margin: 0 auto; }
-.pp-hero-shell {
-    min-height: 361px;
+
+.container-1600 {
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-@media (min-width: 511.98px) {
-    .pp-hero-shell {
-        max-height: 364px;
-    }
+.container-1170 {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.pp-hero-shell {
+    min-height: 361px;
+    margin: 0 auto;
 }
 
 .pp-hero-image {
@@ -79,24 +74,6 @@ header, .pp-hero-shell {
     width: 780px;
     margin-right: -52px;
 }
-
-@media (max-width: 1439.98px) {
-    .pp-hero-image {
-        /* Scale down progressively as viewport shrinks */
-        width: clamp(120px, 54.17vw, 780px);
-        height: auto;
-        opacity: 0.5;
-        /* Increase negative right offset as width shrinks */
-        margin-right: clamp(-100px, calc((1440px - 100vw) * -0.5), 0px);
-        overflow: hidden;        
-    }
-    .pp-hero-media {
-        overflow: hidden;
-    }
-}
-
-
-
 .pp-signup-container {
     background: linear-gradient(135deg, #8E608E 0%, #402640 52%, #371A34 100%);
     color: #fff;
@@ -133,25 +110,6 @@ header, .pp-hero-shell {
     font-size: 50px;
     line-height: 50px;
     letter-spacing: 0;
-}
-
-@media (max-width: 767.98px) {
-    .pp-hero-title {
-        font-size: 38px;
-        
-    }
-
-    .pp-hero-title.text-nowrap,
-    .pp-coming-soon-text.text-nowrap {
-        white-space: normal !important;
-    }
-}
-
-@media (max-width: 419.98px) {
-    .pp-hero-title.text-nowrap {
-        white-space: normal !important;
-    }
-    
 }
 
 .pp-hero-status {
@@ -198,7 +156,7 @@ header, .pp-hero-shell {
 }
 
 /* Pixel-perfect hooks (div/img) */
-.pp-header-container .navbar-nav .nav-link{
+.pp-header-container .navbar-nav .nav-link {
     font-family: "Gotham";
     font-weight: 700;
     font-size: 11px;
@@ -207,19 +165,9 @@ header, .pp-hero-shell {
     text-transform: uppercase;
     vertical-align: middle;
     color: #fff;
-    padding: 5px 24px 0px 0px;
+    padding: 5px 24px 0 0;
     text-wrap: nowrap;
     z-index: 1000;
-}
-
-@media (max-width: 767.98px) {
-    .pp-header-container .navbar-nav .nav-link {
-        padding: 5px 10px 0px 0px;
-    }
-    /* hero image margin top 40px */
-    .pp-hero-image {
-        margin-top: 40px;
-    }    
 }
 
 .pp-hero-content {
@@ -230,8 +178,6 @@ header, .pp-hero-shell {
 }
 .pp-hero-status {
     color: #8F618F;
-    font-size: 14px;
-    font-weight: 300;
 }
 .pp-signup-title {
     font-family: "Gotham";
@@ -252,7 +198,6 @@ header, .pp-hero-shell {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    width: fit-content;
     height: 32px;
     width: 146px;
     font-size: 14px;
@@ -282,20 +227,6 @@ header, .pp-hero-shell {
 .pp-coming-soon-row .pp-coming-soon-text {
     margin-top: 0;
     margin-bottom: 0;
-}
-@media (max-width: 1167.98px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-@media (max-width: 991.98px) {
-    .pp-coming-soon-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    
 }
 
 .pp-signup-form {
@@ -345,7 +276,7 @@ header, .pp-hero-shell {
     font-weight: 300;
     font-size: 17px;
     line-height: 36px;
-    letter-spacing: 0;    
+    letter-spacing: 0;
 }
 .pp-features-section {
     padding-top: 40px;
@@ -353,15 +284,10 @@ header, .pp-hero-shell {
 }
 .pp-features-container {
     height: 228px;
-    padding-top: 20px;    
-}
-@media (max-width: 767.98px) {
-    .pp-features-container {
-        height: auto;
-    }
+    padding-top: 20px;
 }
 .pp-features-row {
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
@@ -371,13 +297,6 @@ header, .pp-hero-shell {
     font-size: 40px;
     line-height: 44px;
     letter-spacing: 0;
-}
-
-@media (max-width: 991.98px) {
-    .pp-features-title {
-        font-size: 32px;
-        line-height: 36px;
-    }
 }
 .pp-why-paragraph {
     font-family: "Gotham";
@@ -480,7 +399,7 @@ header, .pp-hero-shell {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #FFFFFF;
+    color: #fff;
     border-right: 1px dotted #402640;
     padding-right: 20px;
     padding-left: 20px;
@@ -499,18 +418,172 @@ header, .pp-hero-shell {
     font-weight: 300;
     font-size: 16px;
     line-height: 26px;
-    letter-spacing: 0;    
+    letter-spacing: 0;
 }
 
 .pp-features-row > .pp-feature-button:last-child,
-.pp-features-row > .pp-feature-item:last-child .pp-feature-button {
+.pp-features-row > .pp-feature-button:last-child {
     border-right: 0;
     padding-right: 0;
 }
 
 .pp-features-row > .pp-feature-button:first-child,
-.pp-features-row > .pp-feature-item:first-child .pp-feature-button {
+.pp-features-row > .pp-feature-button:first-child {
     padding-left: 0;
+}
+
+.pp-description-container {
+    height: 274px;
+    background: rgba(23, 6, 23, 0.3);
+    font-family: "Gotham";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pp-early-access-container {
+    height: 328px;
+    background: #2C0F29;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.pp-early-access-container .text-center {
+    text-align: left !important;
+}
+.pp-early-access-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.pp-early-access-cards {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.pp-early-access-svg {
+    display: block;
+    width: calc((100% - 32px) / 3);
+    height: auto;
+}
+
+.pp-why-image {
+    margin-left: -84px;
+    margin-right: -60px;
+}
+.pp-final-signup-container {
+    background-color: #260c25;
+}
+/* =========================
+   Responsive queries sorted
+   ========================= */
+@media (min-width: 511.98px) {
+    .pp-hero-shell {
+        max-height: 364px;
+    }
+}
+
+@media (max-width: 1439.98px) {
+    .pp-hero-image {
+        width: clamp(120px, 54.17vw, 780px);
+        height: auto;
+        opacity: 0.5;
+        margin-right: clamp(-100px, calc((1440px - 100vw) * -0.5), 0px);
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 1167.98px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pp-coming-soon-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pp-features-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pp-early-access-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .pp-early-access-container {
+        height: auto;
+    }
+
+    .pp-early-access-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .pp-early-access-description {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pp-early-access-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .pp-early-access-svg {
+        width: min(360px, 100%);
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pp-hero-title {
+        font-size: 38px;
+    }
+
+    .pp-hero-title.text-nowrap,
+    .pp-coming-soon-text.text-nowrap {
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pp-header-container .navbar-nav .nav-link {
+        padding: 5px 10px 0 0;
+    }
+
+    .pp-hero-image {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pp-features-container {
+        height: auto;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -551,25 +624,9 @@ header, .pp-hero-shell {
     }
 
     .pp-why-section {
-        padding-top: 0px;
+        padding-top: 0;
         padding-bottom: 20px;
     }
-}
-
-.pp-description-container {
-    /* Rectangle 165 */
-    height: 274px;
-    background: rgba(23, 6, 23, 0.3);
-    font-family: "Gotham";
-    font-weight: 300;
-    font-style: Light;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    text-align: justify;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 @media (max-width: 767.98px) {
@@ -579,85 +636,11 @@ header, .pp-hero-shell {
         padding-top: 20px;
         padding-right: 16px;
     }
+
     .pp-description-container {
         padding-top: 40px;
         padding-bottom: 40px;
     }
-}
-.pp-early-access-container {
-    height: 328px;    
-    background: #2C0F29;    
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.pp-early-access-container .text-center {
-    text-align: left !important;
-}
-.pp-early-access-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.pp-early-access-cards {
-    display: flex;
-    gap: 16px;
-    width: 100%;
-    align-items: center;
-    margin-top: 24px;
-}
-
-.pp-early-access-svg {
-    display: block;
-    width: calc((100% - 32px) / 3);
-    height: auto;
-}
-
-.pp-why-image {
-    margin-left: -84px;
-    margin-right: -60px;
-}
-
-@media (max-width: 991.98px) {
-    .pp-early-access-section {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .pp-early-access-container {
-        height: auto;
-    }
-
-    .pp-early-access-title {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .pp-early-access-description {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .pp-early-access-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        margin-top: 16px;
-    }
-
-    .pp-early-access-svg {
-        width: min(360px, 100%);
-        max-width: 360px;
-    }
-}
-.pp-final-signup-container {
-    background-color: #260c25;    
-}
-.pp-footer-container {
-    font-weight: 300;
 }
 
 @media (max-width: 575.98px) {
@@ -672,31 +655,8 @@ header, .pp-hero-shell {
     }
 }
 
-
-.pp-header-menu,
-.pp-nav-dropdown-icon,
-.pp-hero-shell,
-.pp-hero-container,
-.pp-hero-row,
-.pp-hero-media,
-.pp-signup-container,
-.pp-features-heading-icon,
-.pp-feature-item,
-.pp-why-container,
-.pp-why-row,
-.pp-why-media,
-.pp-why-content,
-.pp-early-access-cards,
-.pp-early-access-svg,
-.pp-early-access-row,
-.pp-early-access-item,
-.pp-early-access-card,
-.pp-early-access-card-badge,
-.pp-early-access-card-title,
-.pp-early-access-card-subtitle,
-.pp-final-signup-container,
-.pp-final-signup-row,
-.pp-final-signup-form-wrap,
-.pp-footer-container {
-    --pp-hook: 0;
+@media (max-width: 419.98px) {
+    .pp-hero-title.text-nowrap {
+        white-space: normal !important;
+    }
 }
